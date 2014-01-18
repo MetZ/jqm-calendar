@@ -67,7 +67,7 @@
          
          // The way of determing the labels for the days is a bit awkward, but works.
          for ( var i = 0, days = [].concat(plugin.settings.days, plugin.settings.days).splice(plugin.settings.startOfWeek, 7); i < 7; i++ ) {
-            $tr.append("<th class='ui-bar-" + plugin.settings.theme + "'><span class='hidden'>"  + days[i] + "</span></th>");
+            $tr.append("<th class='ui-bar-" + plugin.settings.theme + "'><span class='lowres'>"  + days[i] + "</span></th>");
          }
          
          $tbody = $("<tbody/>").appendTo($table);
@@ -117,7 +117,7 @@
          if ( selected ) $a.click();
          
          if ( hidden ) {
-             $td.addClass("hidden");
+             $td.addClass("lowres");
          } else {
             var importance = 0;
             
