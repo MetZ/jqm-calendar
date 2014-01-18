@@ -136,6 +136,11 @@
             if ( importance > 0 ) {
                 $a.append("<span>&bull;</span>").addClass("importance-" + importance.toString() );
             }
+            
+         }
+         var today = new Date();
+         if (date.getFullYear() === today.getFullYear() && date.getMonth() === today.getMonth() && date.getDate() === today.getDate()){
+            $a.addClass("ui-btn-today");
          }
       }
       
